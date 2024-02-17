@@ -21,8 +21,8 @@ namespace HtmlSerializer
             private HtmlHelper()
         {
 
-            var selfClosing = File.ReadAllText("htmlHelperFiles/HtmlVoidTags");
-            var tags = File.ReadAllText("htmlHelperFiles/HtmlTags");
+            var selfClosing = File.ReadAllText("htmlHelperFiles/HtmlVoidTags.json");
+            var tags = File.ReadAllText("htmlHelperFiles/HtmlTags.json");
             selfClosingTags= new List<string>();
             selfClosingTags= JsonSerializer.Deserialize<List<string>>(selfClosing);
 
